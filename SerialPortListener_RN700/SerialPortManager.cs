@@ -10,6 +10,11 @@ namespace SerialPortListener_RN700
             
         }
 
+        ~SerialPortManager()
+        {
+            Dispose(false);
+        }
+        
         private SerialPort _serialPort;
         private SerialSettings _currentSerialSettings = new SerialSettings();
 
