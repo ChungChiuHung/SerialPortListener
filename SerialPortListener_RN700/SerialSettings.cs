@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.IO.Ports;
-using System.Threading;
 
 namespace SerialPortListener_RN700
 {
@@ -20,7 +19,7 @@ namespace SerialPortListener_RN700
         string _portName = "";
         string[] _portNameCollection;
         int _baudRate = 9600;
-        BindingList<int> baudRateCollection = new BindingList<int>();
+        BindingList<int> _baudRateCollection = new BindingList<int>();
         Parity _parity = Parity.None;
         int _dataBits = 8;
         int[] _dataBitsCollection  = new int[] { 5, 6, 7, 8 };

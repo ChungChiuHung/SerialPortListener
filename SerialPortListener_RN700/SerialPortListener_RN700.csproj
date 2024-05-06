@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>SerialPortListener_RN700</RootNamespace>
     <AssemblyName>SerialPortListener_RN700</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialDataEventArgs.cs" />
     <Compile Include="SerialPortManager.cs" />
     <Compile Include="SerialSettings.cs" />
   </ItemGroup>
