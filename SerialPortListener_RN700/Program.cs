@@ -3,6 +3,8 @@ using System.Text;
 using System.IO.Ports;
 using System.Threading;
 using System.Runtime;
+using System.Dynamic;
+using System.IO;
 
 namespace SerialPortListener_RN700
 {
@@ -18,7 +20,7 @@ namespace SerialPortListener_RN700
         {
             SerialSettings settings = new SerialSettings
             {
-                PortName = "COM3",
+                PortName = "COM5",
                 BaudRate = 9600,
                 Parity = Parity.None,
                 DataBits = 8,
@@ -136,8 +138,36 @@ namespace SerialPortListener_RN700
         {
             responseData = e.Data;
             receivedEvent.Set();
-            string receivedData = Encoding.UTF8.GetString(e.Data);
-            Console.WriteLine("Data Received: " + receivedData);
+            byte delimiter = Encoding.UTF8.GetBytes("}")[0];
+
+            int index = Array.IndexOf(responseData, delimiter);
+
+            if (index != -1)
+            {
+                byte[] firstPart = new byte[index];
+                byte[] secondPart = new byte[responseData.Length - index - 1];
+
+                Array.Copy(responseData, 0, firstPart, 0, index);
+                Array.Copy(responseData, index + 1, secondPart, 0, responseData.Length - index - 1);
+
+                Console.WriteLine("First Part: " + Encoding.UTF8.GetString(firstPart));
+
+                string byteValues = String.Join(",", secondPart);
+
+                string filePath = "output.txt";
+
+                File.WriteAllText(filePath, byteValues);
+
+                Console.WriteLine("Second Part has been saved to " + filePath);
+            }
+            else
+            {
+                Console.WriteLine("Delimiter not found in the array.");
+            }
+            // string receivedData = Encoding.UTF8.GetString(e.Data);
+            //Console.WriteLine("Data Received: " + receivedData);
         }
+
+
     }
 }
