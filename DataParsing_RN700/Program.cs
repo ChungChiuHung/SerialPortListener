@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 
@@ -11,21 +12,25 @@ namespace DataParsing_RN700
         static void Main(string[] args)
         {
             // Construct the path to the 'retrieved_data' folder located at the project level
-            string filePath = @"E:\CodeHere\SerialPortListener\SerialPortListener\DataParsing_RN700\retrived_data\output.txt";
+            string filePath = @"G:\CodeHere\SerialPortListener\DataParsing_RN700\retrived_data\output.txt";
 
 
             try 
             {
                 string content = File.ReadAllText(filePath);
 
-                byte[] byteArray = content.Split(',')
-                                            .Where(b => !string.IsNullOrWhiteSpace(b))
-                                            .Select(b => Convert.ToByte(b.Trim()))
+                byte[] byteArray = content.Split(' ')
+                                            .Select(hex => Convert.ToByte(hex, 16))
                                             .ToArray();
 
-                string utf8String = Encoding.UTF8.GetString(byteArray);
-                Console.WriteLine("UTF-8 String: ");
-                Console.WriteLine(utf8String);
+                Console.Write("Byte Array: ");
+                foreach (byte b in byteArray)
+                {
+                    Console.Write($"{b:X2} ");
+                }
+                Console.WriteLine();
+
+                ConvertBytesToUTF8String(byteArray);
 
             }
             catch (Exception ex)
@@ -34,6 +39,19 @@ namespace DataParsing_RN700
             }
 
             Console.ReadLine();
+        }
+
+        static void ConvertBytesToUTF8String(byte[] bytes)
+        {
+            try
+            {
+                string utf8String = System.Text.Encoding.UTF8.GetString(bytes);
+                Console.WriteLine("Decoded UTF-8 string: "+ utf8String);
+            }
+            catch(Exception ex) 
+            {
+                Console.WriteLine("Error decoding UTF8 string: "+ ex.Message);
+            }
         }
     }
 }

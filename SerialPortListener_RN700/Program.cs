@@ -57,9 +57,9 @@ namespace SerialPortListener_RN700
             // Gets the mode of operation.
             // response: {“result”: “Param1”, “id”: number}
             // Param1(string) : 00~FF
-            // 1 bit : Debug Mode
-            // 2 bit : Tray Detection Mode
-            // 3 bit : Command Mode
+            // 1 bit : Debug Mode => 01
+            // 2 bit : Tray Detection Mode => 02
+            // 3 bit : Command Mode => 04
             // (When you are in command acceptance state, you cannot use commands that transition to a state)
 
             var getData = CommandFactory.CreateCommand("getData", new string[] { }, 1);
@@ -69,7 +69,11 @@ namespace SerialPortListener_RN700
 
             var getCalcType = CommandFactory.CreateCommand("getCalcType", null, 1);
 
+            var setOperatingMode = CommandFactory.CreateCommand("setOperatingMode","02",1); // Command Mode
+            // Set the operating mode. The setting value returns to the initial value when the RN-700 is powered On.
+            // The initial values and details of the settings are described in the getOperatingMode command item
 
+            var startAnalysis = CommandFactory.CreateCommand("startAnalysis", new string[] { }, 1);
 
 
 
@@ -83,6 +87,8 @@ namespace SerialPortListener_RN700
             Console.WriteLine(getSettingFile.ToString());
             Console.WriteLine(getData.ToString());
             Console.WriteLine(getCalcType.ToString());
+            Console.WriteLine(setOperatingMode.ToString());
+            Console.WriteLine(startAnalysis.ToString());
 
             Console.ReadLine();
 
@@ -153,8 +159,8 @@ namespace SerialPortListener_RN700
                         byte[] data = serialPortManager.ReadData();
                         if (data.Length > 0)
                         {
-                            string receivedData = Encoding.UTF8.GetString(data);
-                            Console.WriteLine("Data Received: " + receivedData);
+                            string[] hexStringArray = ConvertByteArrayToHexStringArray(data);
+                            Console.Write("Data Received: " + string.Join(" ", hexStringArray));
                         }
                     }
                     else 
@@ -169,6 +175,8 @@ namespace SerialPortListener_RN700
             {
                 IsBackground = true
             };
+
+            readThread.IsBackground = true;
             readThread.Start();
         }
 
@@ -192,52 +200,43 @@ namespace SerialPortListener_RN700
 
             if (receivedEvent.Wait(5000))
             {
-                string response = Encoding.UTF8.GetString(responseData);
-                Console.WriteLine("Response Received: " + response);
+                string[] hexStringArray = ConvertByteArrayToHexStringArray(responseData);
+                AppendTextToFile("output.txt", hexStringArray);
             }
             else
             {
-                Console.WriteLine("No response received within the timout peroid.");
+                Console.WriteLine("Response timeout.");
             }
-
-            serialPortManager.StartReading();
-            cancellationTokenSource = new CancellationTokenSource();
         }
 
         static void OnDataReceived(object sender, SerialDataEventArgs e)
         {
             responseData = e.Data;
             receivedEvent.Set();
-            byte delimiter = Encoding.UTF8.GetBytes("}")[0];
-
-            int index = Array.IndexOf(responseData, delimiter);
-
-            if (index != -1)
-            {
-                byte[] firstPart = new byte[index];
-                byte[] secondPart = new byte[responseData.Length - index - 1];
-
-                Array.Copy(responseData, 0, firstPart, 0, index);
-                Array.Copy(responseData, index + 1, secondPart, 0, responseData.Length - index - 1);
-
-                Console.WriteLine("First Part: " + Encoding.UTF8.GetString(firstPart));
-
-                string byteValues = String.Join(",", secondPart);
-
-                string filePath = "output.txt";
-
-                File.WriteAllText(filePath, byteValues);
-
-                Console.WriteLine("Second Part has been saved to " + filePath);
-            }
-            else
-            {
-                Console.WriteLine("Delimiter not found in the array.");
-            }
-            // string receivedData = Encoding.UTF8.GetString(e.Data);
-            //Console.WriteLine("Data Received: " + receivedData);
         }
 
+        private static void AppendTextToFile(string filePath, string[] hexStrings)
+        {
+            try
+            {
+                File.AppendAllLines(filePath, hexStrings);
+                Console.WriteLine("Hex data appended to file successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: "+ ex.Message);
+            }
+        }
+
+        public static string[] ConvertByteArrayToHexStringArray(byte[] bytes)
+        {
+            string[] hexArray = new string[bytes.Length];
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                hexArray[i] = bytes[i].ToString("X2");
+            }
+            return hexArray;
+        }
 
     }
 }
