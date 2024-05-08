@@ -67,13 +67,41 @@ namespace SerialPortListener_RN700
             // Param1 : YYYYMMDDhhmm.ss
             // Example: {“result”: “201405150910.00”, “id”: 1}
 
-            var getCalcType = CommandFactory.CreateCommand("getCalcType", null, 1);
+            var getCalcType = CommandFactory.CreateCommand("getCalcType", new string[] {}, 1);
 
             var setOperatingMode = CommandFactory.CreateCommand("setOperatingMode","02",1); // Command Mode
             // Set the operating mode. The setting value returns to the initial value when the RN-700 is powered On.
             // The initial values and details of the settings are described in the getOperatingMode command item
 
             var startAnalysis = CommandFactory.CreateCommand("startAnalysis", new string[] { }, 1);
+            // Start measuring. Returns a response message after the measurement is complete
+
+            var startAnalysisAsync = CommandFactory.CreateCommand("startAnalysisAsync", new string[] { }, 1);
+            // Start measuring. Returns a response message before the measurement starts.
+
+            var printResult = CommandFactory.CreateCommand("printResult", new int[] { 0, 1, -1 }, 1);
+            // The last measured measurement result is printed according to the parameters.
+            // The measurement results are deleted when the firmware starts.
+            // Param1(int) : Printing Type (0: Detailed Classification 1: Standard Classification)
+            // Param2(int) : Printing Calculation Method (0: Grain count % 1: Mass Conversion %)
+            // Param3(int) : Specify the print result
+            //               ( -1: Result without average
+            //                  0: Average result at average measurement
+            //                  1 or more: Nth result at average measurement)
+
+            var setSaveData = CommandFactory.CreateCommand("setSaveData", new int[] { 1, 1, 0, 0 }, 0);
+            // Set up data storage
+            // Param1(int) : Measurement results (0: Do not save, 1: Save)
+            // Param2(int) : Image Large (0: Do not save, 1: Save)
+            // Param3(int) : Image/Small (0: Do not save 1: Save)
+            // Param4(int) : Result list (0: Do not save, 1: Save)
+
+            var chkTray = CommandFactory.CreateCommand("chkTray", new string[] { }, 1);
+            // Perform a tray check
+            // Response: {“result”:[Param1, Param2], “id”: number}
+            // Param1(int): 
+            // Param2(int): Error number
+
 
 
 
