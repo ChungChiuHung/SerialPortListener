@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortListener_RN700", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParsing_RN700", "DataParsing_RN700\DataParsing_RN700.csproj", "{A2FD6505-A8E6-4383-A095-7669D0487128}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialPortCommunication", "SerialPortCommunication\SerialPortCommunication.csproj", "{9F151438-7376-4A9C-A02B-CEE996ED3121}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A2FD6505-A8E6-4383-A095-7669D0487128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2FD6505-A8E6-4383-A095-7669D0487128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2FD6505-A8E6-4383-A095-7669D0487128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F151438-7376-4A9C-A02B-CEE996ED3121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F151438-7376-4A9C-A02B-CEE996ED3121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F151438-7376-4A9C-A02B-CEE996ED3121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F151438-7376-4A9C-A02B-CEE996ED3121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

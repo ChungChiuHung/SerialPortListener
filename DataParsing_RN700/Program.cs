@@ -20,6 +20,10 @@ namespace DataParsing_RN700
             {
                 List<byte> hexValue = ReadHexValuesFromFile(filePath);
 
+                byte[] mybyteArray = hexValue.ToArray();
+
+                parsing_1 parse_1 = new parsing_1(mybyteArray);
+
                 StringBuilder str = new StringBuilder();
 
                 Console.WriteLine("Read hex values: ");
