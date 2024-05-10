@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace DataParsing_RN700
         static void Main(string[] args)
         {
             // Construct the path to the 'retrieved_data' folder located at the project level
-            string filePath = @"E:\CodeHere\SerialPortListener\SerialPortListener\DataParsing_RN700\retrived_data\output.txt";
+            string filePath = @"...\SerialPortListener\DataParsing_RN700\retrived_data\output.txt";
 
 
             try 
