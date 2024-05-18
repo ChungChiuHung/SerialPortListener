@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using System.Numerics;
-using System.Security.AccessControl;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace DataParsing_RN700
 {
@@ -76,10 +74,19 @@ namespace DataParsing_RN700
 
                 }
 
+
             }
             else
             {
                 Console.WriteLine("Not enough bytes in second part to split as specified.");
+            }
+        }
+
+        static Image ConvertByteArrayToImage(byte[] byteArray)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArray))
+            {
+                return Image.FromStream(ms);
             }
         }
 
