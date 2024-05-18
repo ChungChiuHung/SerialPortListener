@@ -1,0 +1,327 @@
+{"method" : "getOperatingStatus", "params":[], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_00.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_01.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_02.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_03.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_04.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_05.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_06.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_07.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_08.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_09.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_10.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_11.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_12.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_13.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_14.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_15.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_16.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_17.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_18.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_19.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_20.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_00.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_01.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_02.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_03.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_04.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_05.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_06.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_07.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_08.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_09.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_10.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_11.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_12.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_13.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_14.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_15.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_16.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_17.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_18.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_19.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_20.csv"], "id":1}
+
+{"method" : "setAnalysisType", "params":[12], "id":1}
+{"method" : "getSettingFile", "params":["machine.conf"], "id":1}
+{"method" : "getSettingFile", "params":["comm.conf"], "id":1}
+{"method" : "getAnalysisType", "params":[], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/rn700.conf"], "id":1}
+{"method" : "getAnalysisType", "params":[], "id":1}
+{"method" : "getAnalysisLevel", "params":[], "id":1}
+{"method" : "getCalcType", "params":[], "id":1}
+{"method" : "getClassType", "params":[], "id":1}
+{"method" : "getOutputMode", "params":[], "id":1}
+
+{"method" : "setSettingFile", "params":["machine.conf"], "id":1}
+?...
+[machine]
+serial_number                  = BJ10202
+
+
+[wlan]
+channel                        = 3
+ip_addr                        = 192,168,0,1
+netmask                        = 255,255,255,0
+power                          = 0
+
+
+a...
+
+{"method" : "setSettingFile", "params":["comm.conf"], "id":1}+...
+[version]
+image_proc                     = 0415(20210804)
+raw_to_bmp                     = 20150924
+raw_to_jpg                     = 20150402
+raw_to_tif                     = 20160421
+calibrate_camera               = 20151008
+calibrate_check                = 20151020
+oled                           = 0
+
+
+[settings]
+timeout                        = 1
+board                          = 1
+image_offset                   = 70,85,0,0
+analysis_type                  = 12
+print_pattern                  = 3
+lot_number                     = 0
+lot_number_inc                 = 0
+mestry_detect_time             = 1000,1000
+stdtry_detect_time             = 1000,1000
+grain_cnt_err_th               = 0
+
+
+[save_data]
+result                         = 1
+image_bmp                      = 0
+image_jpg                      = 0
+result_list                    = 0
+
+
+[lighting]
+gate_dark                      = 10
+
+
+[threshold]
+cam_temp_lower                 = 0.000000
+cam_temp_upper                 = 50.000000
+board_temp_lower               = 0.000000
+board_temp_upper               = 50.000000
+adj_timeint                    = 3600.000000
+adj_camtemp                    = 10.000000
+adj_boardtemp                  = 10.000000
+dark_rgb_upper                 = 10,10,10
+retry_chk_lcd                  = 300
+retry_chk_spot                 = 300
+
+
+[img_luminance]
+lcd_img_rgb                    = 214.225000,220.157000,213.699000
+led_img_rgb                    = 170.947500,169.925000,172.125000
+spot_img_rgb                   = 164.144000,165.848000,163.721000
+
+
+[option]
+disable_simple_adj             = 0
+disable_lighting_chk           = 0
+exec_calib_camera              = 0
+exec_adj_led                   = 0
+exec_adj_lcd                   = 0
+exec_adj_spot                  = 2
+move_cmd_mode                  = 0
+disable_buzzer                 = 0
+
+
+‹¥..
+
+{"method" : "getAnalysisType", "params":[], "id":1}
+
+{"method" : "setSettingFile", "params":["analysisType_00012/rn700.conf"], "id":1}
+?..
+[analysis]
+analysis_level                 = 0
+print_calc_type                = 1
+print_class_type               = 1
+
+
+[image_proc]
+spot_size                      = 1
+spot_shape                     = 0
+tray_window                    = 2448,354
+internal_std_board             = 2470,951
+separation_alg                 = 1
+enable_lu_fix                  = 1
+lu_adj_param                   = 1.800000
+lcd_std_smoothing              = 1
+output_mode                    = 0
+ave_times                      = 1
+
+
+[lcd_chk]
+allcolor_target_rgb            = 96,98,85
+rang_per                       = 7.500000
+
+
+[lcd_adj]
+unicolor_target_rgb            = 88,64,72
+adj_plus_cnt                   = 16
+adj_minus_cnt                  = 8
+unicolor_rang_per              = 5.000000
+allcolor_rang_per              = 5.000000
+
+
+[spot_chk]
+allcolor_target_rgb            = 408,500,402
+rang_per                       = 100.000000
+
+
+[spot_adj]
+unicolor_target_rgb            = 2000,2000,2000
+adj_plus_cnt                   = 16
+adj_minus_cnt                  = 8
+unicolor_rang_per              = 0.000000
+allcolor_rang_per              = 0.000000
+
+
+[led_chk]
+allcolor_target_rgb            = 1303,1059,1054
+rang_per                       = 5.000000
+
+
+[led_adj]
+unicolor_led1_target           = 656,491,466
+unicolor_led2_target           = 623,491,517
+adj_plus_per                   = 50.000000
+adj_minus_per                  = 30.000000
+unicolor_rang_per              = 5.000000
+allcolor_rang_per              = 5.000000
+
+
+[spot_value]
+lcd_rgb_multi                  = 2.000000
+lcd_bgcolor_rgb                = 0,0,0
+
+
+[led_image]
+lcd_pwm                        = 0
+lcd_rgb                        = 0,0,0
+led1_rgb                       = 640,1058,1685
+led2_rgb                       = 678,1123,1692
+cam_shutter                    = 0,5000
+camgain_r                      = 0,0,11
+camgain_g1                     = 0,0,10
+camgain_g2                     = 0,0,10
+camgain_b                      = 0,0,13
+t_on                           = 20
+t_off                          = 100
+gate                           = 290
+
+
+[lcd_image]
+lcd_pwm                        = 255
+lcd_rgb                        = 112,68,92
+led1_rgb                       = 0,0,0
+led2_rgb                       = 0,0,0
+cam_shutter                    = 0,5000
+camgain_r                      = 0,0,11
+camgain_g1                     = 0,0,10
+camgain_g2                     = 0,0,10
+camgain_b                      = 0,0,13
+t_on                           = 200
+t_off                          = 200
+gate                           = 100
+
+
+[spot_image]
+lcd_pwm                        = 255
+lcd_rgb                        = 192,120,160
+led1_rgb                       = 0,0,0
+led2_rgb                       = 0,0,0
+cam_shutter                    = 0,20000
+camgain_r                      = 0,0,11
+camgain_g1                     = 0,0,10
+camgain_g2                     = 0,0,10
+camgain_b                      = 0,0,13
+t_on                           = 200
+t_off                          = 200
+gate                           = 100
+
+
+[grid_image]
+lcd_pwm                        = 255
+lcd_rgb                        = 0,0,0
+led1_rgb                       = 0,0,0
+led2_rgb                       = 0,0,0
+cam_shutter                    = 0,2416
+camgain_r                      = 0,0,8
+camgain_g1                     = 0,0,8
+camgain_g2                     = 0,0,8
+camgain_b                      = 0,0,8
+t_on                           = 100
+t_off                          = 100
+gate                           = 100
+
+
+[tray_image]
+lcd_pwm                        = 0
+lcd_rgb                        = 0,0,0
+led1_rgb                       = 0,0,0
+led2_rgb                       = 0,0,0
+cam_shutter                    = 0,24000
+camgain_r                      = 0,0,11
+camgain_g1                     = 0,0,10
+camgain_g2                     = 0,0,10
+camgain_b                      = 0,0,13
+t_on                           = 100
+t_off                          = 100
+gate                           = 100
+
+
+.W..
+
+{"method" : "writeFlash", "params":[], "id":1}
+{"method" : "geSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_00.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_01.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_02.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_03.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_04.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_05.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_06.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_07.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_08.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_09.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_10.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_11.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_12.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_13.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_14.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_15.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_16.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_17.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_18.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_19.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00011/RN700_Parameter_v0414_20.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_00.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_01.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_02.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_03.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_04.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_05.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_06.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_07.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_08.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_09.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_10.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_11.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_12.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_13.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_14.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_15.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_16.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_17.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_18.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_19.csv"], "id":1}
+{"method" : "getSettingFile", "params":["analysisType_00012/RN700_Parameter_v0102p_20.csv"], "id":1}
+{"method" : "getAnalysisLevel", "params":[], "id":1}{"method" : "getOperatingStatus", "params":[], "id":1}
+{"method" : "setAnalysisType", "params":[12], "id":1}{"method" : "getAnalysisLevel", "params":[], "id":1}

@@ -22,8 +22,8 @@ namespace SerialPortListener_RN700
             var getOperatingStatus = CommandFactory.CreateCommand("getOperatingStatus", new string[] { }, 1);
             // response: {"result":[Param1, Param2], "id":number}
             // Param1 = 0 : 測定可能 (Measurable)
-            // Param1 = 3 : 測定可能狀態 (Mesurable state)
-            // Param1 = 4 : 測定 (measurement)
+            // Param1 = 3 : 測定可能狀態 (Mesurable state) 量測結束 
+            // Param1 = 4 : 測定 (measurement) 量測中
             var getLimitSwitch = CommandFactory.CreateCommand("getLimitSwitch", new string[] { }, 1);
             // response: {"result:[Param1, Param2], "id":number}
             // Param1 TraySwitch1 (ON/OFF : 1/0)
@@ -35,6 +35,7 @@ namespace SerialPortListener_RN700
 
             var getAnalysisResults = CommandFactory.CreateCommand("getAnalysisResults",new string[] {"result.csv"}, 1);
             // Get the specified measurement result data
+            // We could get the measurement result from the "print.csv"
 
             var getAnalysisType = CommandFactory.CreateCommand("getAnalysisType", new string[] { }, 1);
             // Acquires the set measurement type ID and measurement type name

@@ -1,0 +1,124 @@
+{"method":"getOperatingStatus","params":[],"id":1}
+{"method":"getOperatingMode","params":[],"id":1}
+{"method":"setOperatingMode","params":["06"],"id":1}
+{"method":"dispOledMsg","params":[4],"id":1}
+
+{"method" : "setSettingFile", "params":["machine.conf"], "id":1}
+?...
+[machine]
+serial_number                  = BJ10202
+
+
+[wlan]
+channel                        = 3
+ip_addr                        = 192,168,0,1
+netmask                        = 255,255,255,0
+power                          = 0
+
+
+a...{"method" : "setSettingFile", "params":["comm.conf"], "id":1}+...
+[version]
+image_proc                     = 0415(20210804)
+raw_to_bmp                     = 20150924
+raw_to_jpg                     = 20150402
+raw_to_tif                     = 20160421
+calibrate_camera               = 20151008
+calibrate_check                = 20151020
+oled                           = 0
+
+
+[settings]
+timeout                        = 1
+board                          = 1
+image_offset                   = 70,85,0,0
+analysis_type                  = 12
+print_pattern                  = 3
+lot_number                     = 0
+lot_number_inc                 = 0
+mestry_detect_time             = 1000,1000
+stdtry_detect_time             = 1000,1000
+grain_cnt_err_th               = 0
+
+
+[save_data]
+result                         = 1
+image_bmp                      = 0
+image_jpg                      = 0
+result_list                    = 0
+
+
+[lighting]
+gate_dark                      = 10
+
+
+[threshold]
+cam_temp_lower                 = 0.000000
+cam_temp_upper                 = 50.000000
+board_temp_lower               = 0.000000
+board_temp_upper               = 50.000000
+adj_timeint                    = 3600.000000
+adj_camtemp                    = 10.000000
+adj_boardtemp                  = 10.000000
+dark_rgb_upper                 = 10,10,10
+retry_chk_lcd                  = 300
+retry_chk_spot                 = 300
+
+
+[img_luminance]
+lcd_img_rgb                    = 214.225000,220.157000,213.699000
+led_img_rgb                    = 170.947500,169.925000,172.125000
+spot_img_rgb                   = 164.144000,165.848000,163.721000
+
+
+[option]
+disable_simple_adj             = 0
+disable_lighting_chk           = 0
+exec_calib_camera              = 0
+exec_adj_led                   = 0
+exec_adj_lcd                   = 0
+exec_adj_spot                  = 2
+move_cmd_mode                  = 0
+disable_buzzer                 = 0
+
+
+‹¥..
+
+
+{"method" : "getLimitSwitch", "params":[], "id":1}
+{"method" : "getOperatingStatus", "params":[], "id":1}
+//½T©w¦«½L¬O§_¤w¸m¤J
+
+[13/05/2024 13:06:03] Written data (COM5) 
+    7b 22 6d 65 74 68 6f 64 22 3a 22 67 65 74 41 6e  
+    61 6c 79 73 69 73 52 65 73 75 6c 74 73 22 2c 22  
+    70 61 72 61 6d 73 22 3a 5b 22 70 72 69 6e 74 2e  
+    63 73 76 22 5d 2c 22 69 64 22 3a 31 7d  
+[13/05/2024 13:06:03] Read data (COM5) 
+    7b 20 22 72 65 73 75 6c 74 22 3a 20 22 62 69 6e  
+    61 72 79 22 2c 20 22 69 64 22 3a 20 31 20 7d 80  
+    01 00 00 32 34 e5 b9 b4 30 35 e6 9c 88 31 33 e6  
+    97 a5 0a 31 34 e6 99 82 30 34 e5 88 86 0a 31 32  
+    2c e5 8f b0 e7 81 a3 e7 b2 be e7 b1 b3 0a 30 2c  
+    e5 8e 9f e5 bb a0 e5 8f 83 e6 95 b8 0a 30 30 30  
+    30 30 30 30 30 0a 31 0a 31 2c 31 2c e5 ae 8c e6  
+    95 b4 e7 b2 92 2c 31 37 37 e7 b2 92 2c 32 38 2e  
+    33 ef bc 85 2c 34 34 2e 34 ef bc 85 2c 30 0a 31  
+    2c 30 2c e7 99 bd e7 b2 89 e8 b3 aa e7 b2 92 2c  
+    31 38 e7 b2 92 2c 32 2e 39 ef bc 85 2c 34 2e 30  
+    ef bc 85 2c 30 0a 31 2c 30 2c e7 a2 8e e7 b2 92  
+    2c 33 34 36 e7 b2 92 2c 35 35 2e 34 ef bc 85 2c  
+    34 35 2e 35 ef bc 85 2c 30 0a 31 2c 30 2c e8 a2  
+    ab e5 ae b3 e7 b2 92 2c 30 e7 b2 92 2c 30 2e 30  
+    ef bc 85 2c 30 2e 30 ef bc 85 2c 30 0a 31 2c 30  
+    2c e8 91 97 e8 89 b2 e7 b2 92 2c 31 e7 b2 92 2c  
+    30 2e 32 ef bc 85 2c 30 2e 32 ef bc 85 2c 30 0a  
+    31 2c 30 2c e8 83 b4 e8 a3 82 e7 b2 92 2c 39 e7  
+    b2 92 2c 31 2e 34 ef bc 85 2c 32 2e 33 ef bc 85  
+    2c 30 0a 31 2c 31 2c e5 b0 8f e7 a2 8e e7 b2 92  
+    e7 ad 89 2c 37 34 e7 b2 92 2c 31 31 2e 38 ef bc  
+    85 2c 33 2e 37 ef bc 85 2c 30 0a 31 2c 30 2c e7  
+    95 b0 e7 a8 ae e7 a9 80 e7 b2 92 2c 30 e7 b2 92  
+    2c 30 2e 30 ef bc 85 2c 30 2e 30 ef bc 85 2c 30  
+    0a 31 2c 30 2c e5 90 88 e8 a8 88 2c 36 32 35 e7  
+    b2 92 0a 6a af 00 00  
+

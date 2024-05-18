@@ -50,11 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="retrived_data\retrived_comm_2" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="retrived_data\output.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="retrived_data\retrived_comm.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
