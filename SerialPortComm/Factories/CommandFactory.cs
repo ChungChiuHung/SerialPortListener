@@ -1,7 +1,4 @@
-﻿using System;
-using System.Security.Cryptography.X509Certificates;
-
-public static class CommandFactory
+﻿public static class CommandFactory
 {
     public static ICommand CreateCommand(string commandName, object parameterValue, int number)
     {

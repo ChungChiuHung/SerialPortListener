@@ -17,23 +17,25 @@ namespace SerialPortListener_RN700
         static void Main(string[] args)
         {
 
-            var command = CommandFactory.CreateCommand("getUser", new string[] { "Alice", "Bob" }, 123);
             var getStatus = CommandFactory.CreateCommand("getStatus", new string[] {}, 1);
             var getOperatingStatus = CommandFactory.CreateCommand("getOperatingStatus", new string[] { }, 1);
             // response: {"result":[Param1, Param2], "id":number}
             // Param1 = 0 : 測定可能 (Measurable)
             // Param1 = 3 : 測定可能狀態 (Mesurable state) 量測結束 
             // Param1 = 4 : 測定 (measurement) 量測中
+
             var getLimitSwitch = CommandFactory.CreateCommand("getLimitSwitch", new string[] { }, 1);
             // response: {"result:[Param1, Param2], "id":number}
             // Param1 TraySwitch1 (ON/OFF : 1/0)
             // Param2 TraySwitch2 (ON/OFF : 1/0)
             // Param3 Entrance shutter switch (ON/OFF : 1/0)
+
             var getLcdBitmap = CommandFactory.CreateCommand("getLcdBitmap", new string[] { }, 1);
             // response: {"result":"binary", "id":number}
             // Get the LCD display bitmap
 
-            var getAnalysisResults = CommandFactory.CreateCommand("getAnalysisResults",new string[] {"result.csv"}, 1);
+            //var getAnalysisResults = CommandFactory.CreateCommand("getAnalysisResults",new string[] {"result.csv"}, 1);
+            var getAnalysisResults = CommandFactory.CreateCommand("getanalysisResults", new string[] {"print.csv"}, 1);
             // Get the specified measurement result data
             // We could get the measurement result from the "print.csv"
 
@@ -125,7 +127,7 @@ namespace SerialPortListener_RN700
 
             SerialSettings settings = new SerialSettings
             {
-                PortName = "COM5",
+                PortName = "COM3",
                 BaudRate = 9600,
                 Parity = Parity.None,
                 DataBits = 8,

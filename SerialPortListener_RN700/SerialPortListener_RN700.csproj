@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Factories\CommandFactory.cs" />
     <Compile Include="Models\Command.cs" />
+    <Compile Include="Models\RN700AnalysisEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerialDataEventArgs.cs" />
