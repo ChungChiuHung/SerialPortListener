@@ -54,19 +54,19 @@ using (var serialPortManger = new SerialPortManager(serialPortSettings))
             string strData = Encoding.UTF8.GetString(data);
             Console.WriteLine(strData);
 
-            if(strData == "analysis finish!\r\n")
-            {
-                serialPortManger.SendString("getResult");
-            }
+            //if(strData == "analysis finish!\r\n")
+            //{
+            //    serialPortManger.SendString("getResult");
+            //}
             
         }
     };
 
     serialPortManger.Open();
 
-    //string input = "The message from PC.";
+    string input = Console.ReadLine();
     
-    //serialPortManger.SendString(input);
+    serialPortManger.SendString(input);
 
 
     Console.WriteLine("Press any key to exit...");

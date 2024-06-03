@@ -3,6 +3,8 @@ using System.Text;
 using System.IO.Ports;
 using System.Threading;
 using System.IO;
+using SerialPortListener_RN700.Config;
+using Microsoft.Extensions.Configuration;
 
 namespace SerialPortListener_RN700
 {
@@ -16,6 +18,19 @@ namespace SerialPortListener_RN700
 
         static void Main(string[] args)
         {
+
+            IConfiguration config = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            SerialPortSettings serialPortSettings = config.GetSection("SerialPortSettings").Get<SerialPortSettings>();
+            
+            if(serialPortSettings == null)
+            {
+                Console.WriteLine("Serial port settings(appsetting.json) are not configured properly.");
+                return;
+            }
 
             var getStatus = CommandFactory.CreateCommand("getStatus", new string[] {}, 1);
             var getOperatingStatus = CommandFactory.CreateCommand("getOperatingStatus", new string[] { }, 1);
@@ -108,7 +123,7 @@ namespace SerialPortListener_RN700
 
 
 
-            Console.WriteLine(command.ToString());
+            //Console.WriteLine(command.ToString());
             Console.WriteLine(getStatus.ToString());
             Console.WriteLine(getOperatingStatus.ToString());
             Console.WriteLine(getLimitSwitch.ToString());
@@ -127,8 +142,8 @@ namespace SerialPortListener_RN700
 
             SerialSettings settings = new SerialSettings
             {
-                PortName = "COM3",
-                BaudRate = 9600,
+                PortName = serialPortSettings.PortName,
+                BaudRate = serialPortSettings.BaudRate,
                 Parity = Parity.None,
                 DataBits = 8,
                 StopBits = StopBits.One
@@ -232,7 +247,10 @@ namespace SerialPortListener_RN700
             if (receivedEvent.Wait(5000))
             {
                 string[] hexStringArray = ConvertByteArrayToHexStringArray(responseData);
-                AppendTextToFile("output.txt", hexStringArray);
+                //AppendTextToFile("output.txt", hexStringArray);
+                string utf8String = Encoding.UTF8.GetString(responseData);
+                Console.WriteLine(utf8String);
+
             }
             else
             {

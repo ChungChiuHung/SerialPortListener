@@ -1,4 +1,4 @@
-﻿namespace RN700Communication.Config
+﻿namespace SerialPortListener_RN700.Config
 {
     public class SerialPortSettings
     {
