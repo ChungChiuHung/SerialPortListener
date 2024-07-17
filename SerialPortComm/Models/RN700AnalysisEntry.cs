@@ -2,23 +2,23 @@
 {
     public class RN700AnalysisEntry
     {
-        public double Whole { get; set; }
-        public double WholePercent { get; set; }
+        public decimal Whole { get; set; }
+        public decimal WholePercent { get; set; }
 
-        public double Cracked { get; set; }
-        public double CrackedPercent { get; set; }
+        public decimal Cracked { get; set; }
+        public decimal CrackedPercent { get; set; }
 
-        public double Immature { get; set; }
-        public double ImmaturePercent { get; set; }
+        public decimal Immature { get; set; }
+        public decimal ImmaturePercent { get; set; }
 
-        public double Pest { get; set; }
-        public double PestPercent { get; set; }
+        public decimal Pest { get; set; }
+        public decimal PestPercent { get; set; }
 
-        public double Colored { get; set; }
-        public double ColoredPercent { get; set; }
+        public decimal Colored { get; set; }
+        public decimal ColoredPercent { get; set; }
 
-        public double Dead { get; set; }
-        public double DeadPercent { get; set; }
+        public decimal Dead { get; set; }
+        public decimal DeadPercent { get; set; }
 
 
     }
